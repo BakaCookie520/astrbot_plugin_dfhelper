@@ -1,0 +1,77 @@
+{
+  "api_token": {
+    "description": "卡战备 API 密钥",
+    "type": "string",
+    "default": "",
+    "hint": "API 文档中的 token 参数，插件会作为 query 参数发送。",
+    "obvious_hint": true
+  },
+  "timeout_seconds": {
+    "description": "接口超时时间（秒）",
+    "type": "int",
+    "default": 8,
+    "hint": "接口文档说明一般 3 秒内返回，建议设置为 5 到 10 秒。"
+  },
+  "result_item_limit": {
+    "description": "最多展示配装明细数量",
+    "type": "int",
+    "default": 12,
+    "hint": "范围 1 到 30，过多可能刷屏。"
+  },
+  "result_scheme_limit": {
+    "description": "实时卡战备最多展示方案数量",
+    "type": "int",
+    "default": 5,
+    "hint": "范围 1 到 10，过多可能刷屏。"
+  },
+  "trade_match_limit": {
+    "description": "交易行最多展示匹配物品数量",
+    "type": "int",
+    "default": 8,
+    "hint": "范围 1 到 20，按名称匹配程度排序。"
+  },
+  "item_price_cache_seconds": {
+    "description": "交易行价格缓存时间（秒）",
+    "type": "int",
+    "default": 45,
+    "hint": "范围 0 到 300。只缓存价格库，基础信息库会在首次加载后持久化到本地。"
+  },
+  "user_whitelist": {
+    "description": "用户白名单",
+    "type": "list",
+    "default": [],
+    "hint": "填写允许使用插件的用户 ID。为空表示不限制用户；黑名单优先级更高。"
+  },
+  "user_blacklist": {
+    "description": "用户黑名单",
+    "type": "list",
+    "default": [],
+    "hint": "填写禁止使用插件的用户 ID。命中后直接拒绝。"
+  },
+  "group_whitelist": {
+    "description": "群白名单",
+    "type": "list",
+    "default": [],
+    "hint": "填写允许使用插件的群 ID。为空表示不限制群；仅对群聊生效。"
+  },
+  "group_blacklist": {
+    "description": "群黑名单",
+    "type": "list",
+    "default": [],
+    "hint": "填写禁止使用插件的群 ID。命中后直接拒绝。"
+  },
+  "admin_user_ids": {
+    "description": "管理员用户 ID",
+    "type": "list",
+    "default": [],
+    "hint": "填写可管理用户使用次数的管理员用户 ID。管理员不消耗使用次数。"
+  },
+  "usage_quotas": {
+    "description": "用户功能使用次数数据",
+    "type": "object",
+    "default": {},
+    "items": {},
+    "invisible": true,
+    "hint": "插件自动维护，请勿手动修改。"
+  }
+}
