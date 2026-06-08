@@ -6,8 +6,9 @@
 
 1. 将本目录放入 AstrBot 的 `data/plugins/astrbot_plugin_dfhelper`。
 2. 在 AstrBot WebUI 插件管理中启用插件。
-3. 在插件配置中填写：
-   - `api_token`：API 文档要求的 `token` 密钥。
+3. 前往 [API 开通页面](https://orzice.com/work/v/home) 开通 API，并获取 `token`。
+4. 在插件配置中填写：
+   - `api_token`：在 API 开通页面获取的 `token` 密钥。
    - `timeout_seconds`：接口超时时间，默认 `8` 秒。
    - `result_scheme_limit`：实时卡战备最多展示方案数量，默认 `5` 个。
    - `result_item_limit`：每个方案最多展示明细数量，默认 `12` 项。
